@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickHealth - Transform Your Office Food Culture</title>
+    <meta name="description" content="Connect your company with Atlanta's premium healthy meal providers. Launching Q1 2025.">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">PickHealth</span>
+            </div>
+            <div class="nav-links">
+                <a href="#who-we-are" class="nav-link">Who We Are</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#coming-soon" class="nav-link">Coming Soon</a>
+            </div>
+            <div class="nav-cta">
+                <button class="btn btn-secondary">Get Early Access</button>
+            </div>
+        </div>
+        <div class="nav-progress" id="nav-progress"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-mesh"></div>
+            <div class="floating-elements">
+                <div class="floating-bowl" data-speed="0.5">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&h=200&fit=crop&crop=center" alt="Healthy bowl">
+                </div>
+                <div class="floating-ingredient" data-speed="0.3">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=150&h=150&fit=crop&crop=center" alt="Fresh ingredients">
+                </div>
+                <div class="floating-vegetable" data-speed="0.7">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&h=120&fit=crop&crop=center" alt="Fresh vegetables">
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="typing-text" id="typing-text"></span>
+                    <span class="cursor">|</span>
+                </h1>
+                <p class="hero-subtitle fade-in">
+                    Connect your company with Atlanta's premium healthy meal providers
+                </p>
+                <div class="hero-cta">
+                    <button class="btn btn-primary btn-large">
+                        <span class="btn-text">Get Started</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn btn-outline btn-large">
+                        <span class="btn-text">Learn More</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&crop=center" alt="Healthy corporate meals" class="hero-image">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="who-we-are" id="who-we-are">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who We Are</h2>
+                <p class="section-subtitle">Passionate about transforming workplace wellness through healthy eating</p>
+            </div>
+            
+            <div class="who-we-are-content">
+                <div class="bio-content" data-aos="fade-right" data-aos-delay="100">
+                    <div class="mission-statement">
+                        <div class="mission-icon">💚</div>
+                        <h3>Our Mission</h3>
+                        <p>We believe that healthy employees are happy, productive, and engaged employees. Our mission is to bridge the gap between corporate wellness goals and the reality of office food culture.</p>
+                    </div>
+                    
+                    <div class="values-grid">
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="value-icon">🌱</div>
+                            <h4>Health-First</h4>
+                            <p>Every meal we curate prioritizes nutrition, taste, and employee satisfaction.</p>
+                        </div>
+                        
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="value-icon">🤝</div>
+                            <h4>Partnership</h4>
+                            <p>We work closely with both companies and meal providers to create win-win solutions.</p>
+                        </div>
+                        
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="value-icon">🏆</div>
+                            <h4>Excellence</h4>
+                            <p>We're committed to delivering exceptional service and the highest quality meals.</p>
+                        </div>
+                        
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="value-icon">🌍</div>
+                            <h4>Sustainability</h4>
+                            <p>Supporting local businesses and promoting sustainable food practices.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-story" data-aos="fade-left" data-aos-delay="200">
+                    <div class="story-container">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=500&fit=crop&crop=center" alt="Our team" class="story-img">
+                            <div class="story-overlay"></div>
+                        </div>
+                        
+                        <div class="story-content">
+                            <h3>Our Story</h3>
+                            <p>Founded by a team of nutritionists, entrepreneurs, and corporate wellness experts, PickHealth was born from a simple observation: office food culture needed a revolution.</p>
+                            
+                            <div class="founder-quote">
+                                <div class="quote-icon">💬</div>
+                                <blockquote>
+                                    "We've seen firsthand how proper nutrition transforms workplace productivity and employee satisfaction. It's time to make healthy eating the norm, not the exception."
+                                </blockquote>
+                                <cite>- PickHealth Team</cite>
+                            </div>
+                            
+                            <div class="stats-highlight">
+                                <div class="highlight-item">
+                                    <div class="highlight-number">15+</div>
+                                    <div class="highlight-label">Years Combined Experience</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-number">1000+</div>
+                                    <div class="highlight-label">Meals Delivered</div>
+                                </div>
+                                <div class="highlight-item">
+                                    <div class="highlight-number">50+</div>
+                                    <div class="highlight-label">Partner Restaurants</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="health-commitment" data-aos="fade-up" data-aos-delay="600">
+                <div class="commitment-header">
+                    <h3>Our Commitment to Health</h3>
+                    <p>We're not just delivering meals—we're delivering wellness, one bite at a time.</p>
+                </div>
+                
+                <div class="commitment-features">
+                    <div class="commitment-feature">
+                        <div class="feature-icon-large">🥗</div>
+                        <h4>Nutritionist-Approved</h4>
+                        <p>Every menu is curated by certified nutritionists to ensure optimal health benefits.</p>
+                    </div>
+                    
+                    <div class="commitment-feature">
+                        <div class="feature-icon-large">🌿</div>
+                        <h4>Fresh & Local</h4>
+                        <p>We partner with local farms and restaurants to bring you the freshest ingredients.</p>
+                    </div>
+                    
+                    <div class="commitment-feature">
+                        <div class="feature-icon-large">⚡</div>
+                        <h4>Energy-Focused</h4>
+                        <p>Meals designed to boost energy, focus, and productivity throughout the workday.</p>
+                    </div>
+                    
+                    <div class="commitment-feature">
+                        <div class="feature-icon-large">🎯</div>
+                        <h4>Personalized</h4>
+                        <p>Customized meal plans that accommodate dietary restrictions and preferences.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Office Food Problem</h2>
+                <p class="section-subtitle">Your employees deserve better than fast food</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="48">0</div>
+                    <div class="stat-label">Office food scores 48/100</div>
+                    <div class="stat-comparison">Same as Wendy's</div>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="65">0</div>
+                    <div class="stat-label">Want healthier options</div>
+                    <div class="stat-comparison">Of employees surveyed</div>
+                </div>
+                
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-count="15">$0</div>
+                    <div class="stat-label">Spent per meal</div>
+                    <div class="stat-comparison">On junk food daily</div>
+                </div>
+            </div>
+            
+            <div class="problem-visual" data-aos="zoom-in" data-aos-delay="400">
+                <div class="infographic">
+                    <div class="problem-icon">🍔</div>
+                    <div class="problem-arrow">→</div>
+                    <div class="solution-icon">🥗</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Three simple steps to transform your office food culture</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-icon">🏢</div>
+                        <h3 class="step-title">Company Setup</h3>
+                        <p class="step-description">Tell us about your team size, dietary preferences, and budget</p>
+                        <div class="step-preview">
+                            <div class="form-preview">
+                                <div class="form-field">
+                                    <div class="field-label">Team Size</div>
+                                    <div class="field-value">25-50 employees</div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="field-label">Budget per meal</div>
+                                    <div class="field-value">$12-18</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-step" data-aos="fade-left" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-icon">👩‍⚕️</div>
+                        <h3 class="step-title">Dietitian Curation</h3>
+                        <p class="step-description">Our nutrition experts match you with the perfect meal providers</p>
+                        <div class="step-preview">
+                            <div class="matching-process">
+                                <div class="match-item">Company Profile</div>
+                                <div class="match-arrow">→</div>
+                                <div class="match-item">AI Matching</div>
+                                <div class="match-arrow">→</div>
+                                <div class="match-item">Provider Selection</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-icon">🚚</div>
+                        <h3 class="step-title">Fresh Delivery</h3>
+                        <p class="step-description">Healthy meals delivered to your office, ready to enjoy</p>
+                        <div class="step-preview">
+                            <div class="delivery-animation">
+                                <div class="truck">🚛</div>
+                                <div class="delivery-path"></div>
+                                <div class="office-building">🏢</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for Both Sides</h2>
+                <p class="section-subtitle">Empowering companies and meal providers alike</p>
+            </div>
+            
+            <div class="features-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="companies">For Companies</button>
+                    <button class="tab-btn" data-tab="providers">For Meal Providers</button>
+                </div>
+                
+                <div class="tab-content active" id="companies-tab">
+                    <div class="features-grid">
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon">📈</div>
+                            <h3 class="feature-title">Boost Productivity</h3>
+                            <p class="feature-description">Healthy employees are 25% more productive and take fewer sick days</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon">💚</div>
+                            <h3 class="feature-title">Employee Wellness</h3>
+                            <p class="feature-description">Support your team's health goals with nutritious, delicious meals</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon">📊</div>
+                            <h3 class="feature-title">Detailed Reporting</h3>
+                            <p class="feature-description">Track meal preferences, costs, and employee satisfaction</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon">👥</div>
+                            <h3 class="feature-title">Retention Boost</h3>
+                            <p class="feature-description">Companies with wellness programs see 28% higher retention</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="providers-tab">
+                    <div class="features-grid">
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="feature-icon">💼</div>
+                            <h3 class="feature-title">Corporate Clients</h3>
+                            <p class="feature-description">Access to Fortune 500 companies and growing startups</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                            <div class="feature-icon">📦</div>
+                            <h3 class="feature-title">Bulk Orders</h3>
+                            <p class="feature-description">Predictable, large-volume orders for better planning</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                            <div class="feature-icon">💰</div>
+                            <h3 class="feature-title">Guaranteed Payments</h3>
+                            <p class="feature-description">Reliable payments within 30 days, every time</p>
+                        </div>
+                        
+                        <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                            <div class="feature-icon">📈</div>
+                            <h3 class="feature-title">Growth Platform</h3>
+                            <p class="feature-description">Scale your business with our corporate network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof" id="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Market Validation</h2>
+                <p class="section-subtitle">The numbers speak for themselves</p>
+            </div>
+            
+            <div class="validation-stats">
+                <div class="validation-stat" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="155.6">$0</div>
+                    <div class="stat-unit">B</div>
+                    <div class="stat-label">Healthy restaurant market</div>
+                </div>
+                
+                <div class="validation-stat" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="88">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Leaders say meals boost attendance</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="88"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-carousel">
+                    <div class="testimonial active">
+                        <p>"We've seen a 40% increase in afternoon productivity since switching to healthy lunches."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">👨‍💼</div>
+                            <div class="author-info">
+                                <div class="author-name">Michael Chen</div>
+                                <div class="author-title">VP of Operations, TechFlow</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="company-logos" data-aos="fade-up" data-aos-delay="400">
+                <div class="logo-item">🏢 Fortune 500</div>
+                <div class="logo-item">🚀 Startups</div>
+                <div class="logo-item">🏥 Healthcare</div>
+                <div class="logo-item">💻 Tech Companies</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Showcase Section -->
+    <section class="food-showcase" id="food-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Premium Healthy Meals</h2>
+                <p class="section-subtitle">Curated by nutrition experts, crafted by local chefs</p>
+            </div>
+            
+            <div class="food-grid">
+                <div class="food-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop&crop=center" alt="Mediterranean Bowl">
+                        <div class="nutrition-overlay">
+                            <div class="nutrition-info">
+                                <div class="nutrition-item">
+                                    <span class="label">Calories:</span>
+                                    <span class="value">420</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="label">Protein:</span>
+                                    <span class="value">28g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="label">Fiber:</span>
+                                    <span class="value">12g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <h3 class="food-name">Mediterranean Bowl</h3>
+                        <p class="food-description">Quinoa, roasted vegetables, grilled chicken, tahini dressing</p>
+                    </div>
+                </div>
+                
+                <div class="food-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop&crop=center" alt="Asian Fusion Salad">
+                        <div class="nutrition-overlay">
+                            <div class="nutrition-info">
+                                <div class="nutrition-item">
+                                    <span class="label">Calories:</span>
+                                    <span class="value">380</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="label">Protein:</span>
+                                    <span class="value">22g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="label">Fiber:</span>
+                                    <span class="value">15g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <h3 class="food-name">Asian Fusion Salad</h3>
+                        <p class="food-description">Mixed greens, edamame, grilled salmon, ginger vinaigrette</p>
+                    </div>
+                </div>
+                
+                <div class="food-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="food-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop&crop=center" alt="Power Protein Bowl">
+                        <div class="nutrition-overlay">
+                            <div class="nutrition-info">
+                                <div class="nutrition-item">
+                                    <span class="label">Calories:</span>
+                                    <span class="value">450</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="label">Protein:</span>
+                                    <span class="value">35g</span>
+                                </div>
+                                <div class="nutrition-item">
+                                    <span class="label">Fiber:</span>
+                                    <span class="value">18g</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-details">
+                        <h3 class="food-name">Power Protein Bowl</h3>
+                        <p class="food-description">Brown rice, black beans, grilled steak, avocado, pico de gallo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon" id="coming-soon">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Launching Q1 2025</h2>
+                <p class="section-subtitle">Starting with Atlanta, expanding nationwide</p>
+            </div>
+            
+            <div class="launch-content">
+                <div class="atlanta-map" data-aos="fade-right" data-aos-delay="100">
+                    <div class="map-container">
+                        <div class="map-background">🗺️</div>
+                        <div class="location-pin" data-aos="bounce" data-aos-delay="500">
+                            <div class="pin-icon">📍</div>
+                            <div class="pin-label">Atlanta</div>
+                        </div>
+                        <div class="expansion-pins">
+                            <div class="expansion-pin" data-city="Miami">📍</div>
+                            <div class="expansion-pin" data-city="Austin">📍</div>
+                            <div class="expansion-pin" data-city="Denver">📍</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="launch-info" data-aos="fade-left" data-aos-delay="200">
+                    <div class="launch-progress">
+                        <h3>Launch Progress</h3>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="75"></div>
+                            </div>
+                            <div class="progress-text">75% Complete</div>
+                        </div>
+                    </div>
+                    
+                    <div class="early-access">
+                        <h3>Get Early Access</h3>
+                        <p>Be among the first to transform your office food culture</p>
+                        <form class="signup-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email" required>
+                                <button type="submit" class="btn btn-primary">Join Waitlist</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">PickHealth</div>
+                    <p>Transforming office food culture, one meal at a time</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Product</h4>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#features">Features</a>
+                        <a href="#coming-soon">Coming Soon</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <a href="#who-we-are">Who We Are</a>
+                        <a href="#about">About</a>
+                        <a href="#careers">Careers</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <a href="#blog">Blog</a>
+                        <a href="#help">Help Center</a>
+                        <a href="#privacy">Privacy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 PickHealth. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

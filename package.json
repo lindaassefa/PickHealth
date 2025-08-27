@@ -1,0 +1,22 @@
+{
+  "name": "pickhealth-landing",
+  "version": "1.0.0",
+  "description": "Premium landing page for PickHealth - corporate wellness catering platform",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "start": "python -m http.server 8000"
+  },
+  "keywords": [
+    "landing-page",
+    "corporate-wellness",
+    "healthy-food",
+    "catering",
+    "atlanta"
+  ],
+  "author": "PickHealth Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
