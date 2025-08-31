@@ -606,6 +606,57 @@ p {
     50% { transform: translateX(10px); }
 }
 
+/* Corporate Meal Problem Subsection */
+.corporate-meal-problem {
+    margin-top: var(--spacing-16);
+    padding: var(--spacing-8);
+    background: var(--gray-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-200);
+}
+
+.problem-heading {
+    color: var(--deep-green);
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-6);
+    text-align: center;
+    font-weight: 700;
+}
+
+.problem-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+}
+
+.problem-point {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4);
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-100);
+    transition: all var(--transition-normal);
+}
+
+.problem-point:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--terracotta);
+}
+
+.point-icon {
+    font-size: var(--font-size-2xl);
+    flex-shrink: 0;
+}
+
+.point-text {
+    color: var(--gray-700);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
 /* How It Works Section */
 .how-it-works {
     padding: var(--spacing-32) 0;
@@ -859,6 +910,92 @@ p {
 .feature-description {
     color: var(--gray-600);
     line-height: 1.6;
+}
+
+/* Partnership Benefits Section */
+.partnership-benefits {
+    padding: var(--spacing-32) 0;
+    background: linear-gradient(135deg, var(--deep-green) 0%, var(--forest-green) 100%);
+    color: var(--white);
+}
+
+.partnership-benefits .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-16);
+}
+
+.partnership-benefits .section-title {
+    color: var(--white);
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-4);
+}
+
+.partnership-benefits .section-subtitle {
+    color: var(--light-green);
+    font-size: var(--font-size-xl);
+    opacity: 0.9;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-8);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--light-green);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.benefit-card:hover::before {
+    opacity: 1;
+}
+
+.benefit-icon {
+    font-size: var(--font-size-5xl);
+    margin-bottom: var(--spacing-4);
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.benefit-title {
+    color: var(--white);
+    margin-bottom: var(--spacing-3);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+}
+
+.benefit-description {
+    color: var(--light-green);
+    line-height: 1.6;
+    opacity: 0.9;
 }
 
 /* Social Proof Section */
@@ -1734,6 +1871,15 @@ p {
     .stats-highlight {
         grid-template-columns: repeat(3, 1fr);
     }
+    
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-6);
+    }
+    
+    .problem-points {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
@@ -1753,6 +1899,24 @@ p {
     .health-commitment {
         padding: var(--spacing-8);
     }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+    
+    .partnership-benefits .section-title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .problem-points {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+    
+    .problem-heading {
+        font-size: var(--font-size-xl);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1766,5 +1930,29 @@ p {
     
     .commitment-features {
         gap: var(--spacing-6);
+    }
+    
+    .benefits-grid {
+        gap: var(--spacing-4);
+    }
+    
+    .partnership-benefits .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .partnership-benefits .section-subtitle {
+        font-size: var(--font-size-lg);
+    }
+    
+    .problem-points {
+        gap: var(--spacing-3);
+    }
+    
+    .problem-heading {
+        font-size: var(--font-size-lg);
+    }
+    
+    .corporate-meal-problem {
+        padding: var(--spacing-6);
     }
 }

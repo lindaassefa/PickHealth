@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PickHealth - Login / Register</title>
+    <meta name="description" content="Join PickHealth - Connect corporate clients with premium meal providers">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="js/auth.js" as="script">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">PickHealth</a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#who-we-are" class="nav-link">Who We Are</a>
+                <a href="index.html#how-it-works" class="nav-link">How It Works</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#partnership-benefits" class="nav-link">Partnership</a>
+                <a href="index.html#coming-soon" class="nav-link">Coming Soon</a>
+            </div>
+            <div class="nav-cta">
+                <a href="auth.html" class="btn btn-primary">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Auth Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Auth Tabs -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Sign In</button>
+                    <button class="auth-tab" data-tab="register">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <div class="auth-form active" id="login-form">
+                    <h2 class="auth-title">Welcome Back</h2>
+                    <p class="auth-subtitle">Enter your email and password to access your account</p>
+                    
+                    <form class="form" id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" placeholder="Enter your email address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" placeholder="Enter your password" required>
+                        </div>
+                        
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-password">Forgot password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Login</button>
+                    </form>
+                </div>
+
+                <!-- Register Form -->
+                <div class="auth-form" id="register-form">
+                    <h2 class="auth-title">Create Your Account</h2>
+                    <p class="auth-subtitle">Tell us about yourself to get started with PickHealth</p>
+                    
+                    <!-- User Type Selection -->
+                    <div class="user-type-selector">
+                        <h3>Choose your account type:</h3>
+                        <div class="type-options">
+                            <label class="type-option">
+                                <input type="radio" name="userType" value="corporate" checked>
+                                <div class="type-card">
+                                    <div class="type-icon">🏢</div>
+                                    <div class="type-label">Corporate Client</div>
+                                    <div class="type-description">Looking for healthy meal providers</div>
+                                </div>
+                            </label>
+                            
+                            <label class="type-option">
+                                <input type="radio" name="userType" value="caterer">
+                                <div class="type-card">
+                                    <div class="type-icon">👨‍🍳</div>
+                                    <div class="type-label">Meal Provider</div>
+                                    <div class="type-description">Ready to serve corporate clients</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Corporate Registration Form -->
+                    <form class="form corporate-form active" id="corporateForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="corpCompanyName">Company Name</label>
+                                <input type="text" id="corpCompanyName" name="companyName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="corpIndustry">Industry</label>
+                                <select id="corpIndustry" name="industry" required>
+                                    <option value="">Select Industry</option>
+                                    <option value="tech">Technology</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="finance">Finance</option>
+                                    <option value="legal">Legal</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="corpTeamSize">Team Size</label>
+                                <select id="corpTeamSize" name="teamSize" required>
+                                    <option value="">Select Team Size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-25">11-25 employees</option>
+                                    <option value="26-50">26-50 employees</option>
+                                    <option value="51-100">51-100 employees</option>
+                                    <option value="100+">100+ employees</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="corpBudget">Budget per Meal</label>
+                                <select id="corpBudget" name="budget" required>
+                                    <option value="">Select Budget</option>
+                                    <option value="8-12">$8-12 per meal</option>
+                                    <option value="12-18">$12-18 per meal</option>
+                                    <option value="18-25">$18-25 per meal</option>
+                                    <option value="25+">$25+ per meal</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="corpLocation">Office Location</label>
+                            <input type="text" id="corpLocation" name="location" placeholder="City, State" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="corpFirstName">First Name</label>
+                                <input type="text" id="corpFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="corpLastName">Last Name</label>
+                                <input type="text" id="corpLastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="corpEmail">Work Email</label>
+                            <input type="email" id="corpEmail" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="corpPassword">Password</label>
+                            <input type="password" id="corpPassword" name="password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="corpPhone">Phone Number</label>
+                            <input type="tel" id="corpPhone" name="phone" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Create Corporate Account</button>
+                    </form>
+                    
+                    <!-- Caterer Registration Form -->
+                    <form class="form caterer-form" id="catererForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="catBusinessName">Business Name</label>
+                                <input type="text" id="catBusinessName" name="businessName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="catCuisine">Cuisine Type</label>
+                                <select id="catCuisine" name="cuisine" required>
+                                    <option value="">Select Cuisine</option>
+                                    <option value="american">American</option>
+                                    <option value="mediterranean">Mediterranean</option>
+                                    <option value="asian">Asian</option>
+                                    <option value="mexican">Mexican</option>
+                                    <option value="italian">Italian</option>
+                                    <option value="indian">Indian</option>
+                                    <option value="healthy">Healthy/Wellness</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catWebsite">Website URL</label>
+                            <input type="url" id="catWebsite" name="website" placeholder="https://yourwebsite.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catLocation">Business Location</label>
+                            <input type="text" id="catLocation" name="location" placeholder="City, State" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="catCapacity">Daily Capacity</label>
+                                <select id="catCapacity" name="capacity" required>
+                                    <option value="">Select Capacity</option>
+                                    <option value="1-50">1-50 meals</option>
+                                    <option value="51-100">51-100 meals</option>
+                                    <option value="101-200">101-200 meals</option>
+                                    <option value="201-500">201-500 meals</option>
+                                    <option value="500+">500+ meals</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="catDelivery">Delivery Range</label>
+                                <select id="catDelivery" name="delivery" required>
+                                    <option value="">Select Range</option>
+                                    <option value="0-5">0-5 miles</option>
+                                    <option value="5-10">5-10 miles</option>
+                                    <option value="10-20">10-20 miles</option>
+                                    <option value="20+">20+ miles</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="catFirstName">First Name</label>
+                                <input type="text" id="catFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="catLastName">Last Name</label>
+                                <input type="text" id="catLastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catEmail">Business Email</label>
+                            <input type="email" id="catEmail" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catPassword">Password</label>
+                            <input type="password" id="catPassword" name="password" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catPhone">Business Phone</label>
+                            <input type="tel" id="catPhone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="catDescription">Business Description</label>
+                            <textarea id="catDescription" name="description" rows="3" placeholder="Tell us about your business, specialties, and what makes you unique..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">Create Caterer Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <!-- Chat Button -->
+        <div class="chat-button" id="chatButton">
+            <div class="chat-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <div class="chat-label">Need Help?</div>
+            <div class="chat-indicator" id="chatIndicator"></div>
+        </div>
+        
+        <!-- Chat Window -->
+        <div class="chat-window" id="chatWindow">
+            <!-- Chat Header -->
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-title">
+                        <h3>PickHealth Assistant</h3>
+                        <span class="chat-status">Online</span>
+                    </div>
+                </div>
+                <div class="chat-controls">
+                    <button class="chat-minimize" id="chatMinimize">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button class="chat-close" id="chatClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <!-- Welcome message will be added here -->
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="quick-actions" id="quickActions">
+                <button class="quick-action" data-action="how-it-works">
+                    <i class="fas fa-play"></i>
+                    How It Works
+                </button>
+                <button class="quick-action" data-action="pricing">
+                    <i class="fas fa-dollar-sign"></i>
+                    Pricing
+                </button>
+                <button class="quick-action" data-action="registration">
+                    <i class="fas fa-user-plus"></i>
+                    Get Started
+                </button>
+                <button class="quick-action" data-action="support">
+                    <i class="fas fa-life-ring"></i>
+                    Support
+                </button>
+            </div>
+            
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <input type="text" 
+                           class="chat-input" 
+                           id="chatInput" 
+                           placeholder="Type your message here..."
+                           maxlength="500">
+                    <button class="chat-send" id="chatSend">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="chat-suggestions" id="chatSuggestions">
+                    <!-- Dynamic suggestions will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
